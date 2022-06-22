@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :seals
+  get "/seals", to: "seals#index"
+  get "/seals/:id", to: "seals#show"
 
   post '/turn', to: 'turns#action'
 end

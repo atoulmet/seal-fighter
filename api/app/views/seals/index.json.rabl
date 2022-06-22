@@ -1,3 +1,3 @@
 collection @seals
 
-extends 'seals/show'
+attributes :id, :name, :img_url
