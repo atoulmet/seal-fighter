@@ -36,7 +36,9 @@ const Info = () => {
               className="h-44 w-44 rounded-lg border-7 border-yellow border-solid"
             />
           )}
-          <h1 className="text-7xl ml-20">{name}</h1>
+          <h1 className="text-7xl ml-20">
+            {name.replace('_', ' ').toUpperCase()}
+          </h1>
         </div>
         <div className="mt-11 font-battle opacity-70 text-3xl flex justify-between">
           <span>HP:{hp}</span>
