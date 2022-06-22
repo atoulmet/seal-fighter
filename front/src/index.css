@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Battle';
+    src: url('./assets/font.otf');
+  }
+  * {
+    --valhalla: #1a003c;
+    --white: #fff;
+    --yellow: #fcd34f;
+    --red: #ff2707;
+  }
+  body {
+    background-color: var(--valhalla);
+    color: var(--white);
+  }
+  h1 {
+    @apply text-2xl;
+    font-family: 'Battle';
+  }
+  h2 {
+    @apply text-xl;
+    font-family: 'Battle';
+  }
+}
