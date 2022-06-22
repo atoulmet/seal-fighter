@@ -5,13 +5,13 @@ const images = require.context('../assets', true)
 
 const Info = () => {
   const params = useParams()
-  const { sealId } = params
+  const { sealName } = params
   const {
     data = [],
     error,
     isLoading,
   } = useQuery('sealInfo', () =>
-    fetch(`${process.env.REACT_APP_API_URI}/seals/${sealId}`).then((res) =>
+    fetch(`${process.env.REACT_APP_API_URI}/seals/${sealName}`).then((res) =>
       res.json()
     )
   )
@@ -41,9 +41,9 @@ const Info = () => {
           </h1>
         </div>
         <div className="mt-11 font-battle opacity-70 text-3xl flex justify-between">
-          <span>HP:{hp}</span>
-          <span>ATTACK:{attack}</span>
-          <span>DEFENSE:{defense}</span>
+          <span>HP: {hp}</span>
+          <span>ATTACK: {attack}</span>
+          <span>DEFENSE: {defense}</span>
         </div>
         <p className="opacity-70 mt-11">{description}</p>
         <Link to="/">

@@ -11,7 +11,7 @@ const SealList = ({ seals = [] }) => (
 
       return (
         <li key={`${name}_${id}`} className="text-center">
-          <Link to={`info/${id}`}>
+          <Link to={`seals/${name}`}>
             {imgUrl && (
               <img
                 src={images(`./${imgUrl}`)}

@@ -9,7 +9,7 @@ const Router = () => (
   <QueryClientProvider client={queryClient}>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/info/:sealId" element={<Info />} />
+      <Route path="/seals/:sealName" element={<Info />} />
     </Routes>
   </QueryClientProvider>
 )

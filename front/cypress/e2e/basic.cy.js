@@ -21,6 +21,6 @@ describe('Basic Info page tests', () => {
 
   it('Should display George Defense', () => {
     cy.visit('/seals/george')
-    cy.contains('DEFENSE: 30').should('be.visible')
+    cy.contains('DEFENSE: 20').should('be.visible')
   })
 })

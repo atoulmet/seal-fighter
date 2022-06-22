@@ -8,7 +8,7 @@ class SealsController < ApplicationController
   end
 
   def show
-    @seals = Seal.find(params[:id])
+    @seals = Seal.find_by(name: params[:name])
     render json: JSON.parse(Rabl.render(@seals, 'seals/show', view_path: 'app/views', format: :json))
   end
 
